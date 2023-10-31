@@ -4,8 +4,9 @@ import random
 
 def tareaUno():
   global Done  
-  #time.sleep (random.random())
+  time.sleep (random.random())
   if not Done:
+    time.sleep (random.random())
     print("Tarea realizada")  
     Done = True
   else :
@@ -14,7 +15,7 @@ def tareaUno():
 
 Done = False
 hilos = list()
-for i in range(50):
+for i in range(8):
   t = threading.Thread(target=tareaUno)
   hilos.append(t)
   t.start()

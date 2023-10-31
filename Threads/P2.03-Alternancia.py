@@ -1,13 +1,15 @@
 import threading
 
-def escribeY():
-  for i in range(1000):
-    print ("y", end="")
+def escribeLetter(letter):
+  for i in range(10):
+    print (letter, end="", flush=True)
   return
 
 print ("INICIO")
-t = threading.Thread(target=escribeY)
-t.start()
+t1 = threading.Thread(target=escribeLetter, args=("Y"))
+t1.start()
+#t2 = threading.Thread(target=escribeLetter, args=("X"))
+#t2.start()
 
-for i in range(1000):
-  print ("X", end="")
+for i in range(10):
+  print ("X", end="", flush=True)
