@@ -13,7 +13,7 @@ def suma_tres():
   time.sleep(0.001)
   g =a+3     
 
-g = 0
+g = 0 # hilo principal
 threads = []
 for func in [suma_uno,suma_tres]:
   threads.append(Thread(target=func))
