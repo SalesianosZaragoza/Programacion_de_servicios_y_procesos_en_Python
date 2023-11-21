@@ -23,7 +23,7 @@ class HiloAbortable(threading.Thread):
       
 h =HiloAbortable()
 h.start()
-time.sleep(1)
+time.sleep(5)
 print ("Antes de invocación a abort()")
 h.abort()
 print ("Después de invocación de abort()")

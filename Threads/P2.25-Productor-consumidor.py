@@ -44,6 +44,7 @@ p = HiloProductor(name='productor')
 p2 = HiloProductor(name='productor2')
 
 c = HiloConsumidor(name='consumidor')
+#c2 = HiloConsumidor(name='consumidor2')
 
 p.start()
 p2.start()  

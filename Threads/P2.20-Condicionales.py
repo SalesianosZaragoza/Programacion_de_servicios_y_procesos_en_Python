@@ -1,11 +1,13 @@
 
 import threading
+import time
 
 def ping(cond):
   for _ in range(20):
     with cond:
       cond.wait()
       print ("ping")
+      time.sleep(10)
       cond.notify()
 
 def pong(cond):

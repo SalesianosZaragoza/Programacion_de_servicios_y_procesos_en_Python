@@ -19,12 +19,12 @@ class ThreadPool(object):
       self.active.remove(name)
       logging.debug('Running: %s', self.active)
 
-def f(s, pool):
+def f(semaphore, pool):
   logging.debug('Esperando para unirse al grupo')
-  with s:
+  with semaphore:
     name = threading.current_thread().name
     pool.makeActive(name)
-    time.sleep(0.5)
+    time.sleep(5)
     pool.makeInactive(name)
 
 

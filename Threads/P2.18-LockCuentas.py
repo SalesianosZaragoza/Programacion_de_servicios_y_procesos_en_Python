@@ -7,7 +7,7 @@ class CuentaBancaria:
     self.nombre = nombre
     self.saldo = saldo
  
-  def __str__(self):
+  def __str__(self): # para imprimir el objeto
     return self.nombre+' '+str(self.saldo)
  
 class BankTransferThread(threading.Thread):

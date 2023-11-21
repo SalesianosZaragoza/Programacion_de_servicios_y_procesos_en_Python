@@ -11,10 +11,11 @@ def suma_uno():
 
 def suma_tres():
   global g
-  with lock: 
+  with lock: #lock.acquire()
     a = g
     time.sleep(0.001)
     g =a+3     
+  #lock.release()    
 
 lock = Lock()
 g = 0
